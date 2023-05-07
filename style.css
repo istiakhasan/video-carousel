@@ -1,0 +1,57 @@
+
+  .carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 450px !important;
+  }
+
+  .carousel-caption {
+    top: 10% !important;
+  }
+
+  .slider_btn {
+    background: rgb(21, 55, 61);
+    padding: 4px 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: sans-serif;
+    border-radius: 8px;
+
+  }
+
+  .play_btn,
+  .pause_btn {
+    height: 60px;
+    cursor: pointer;
+    opacity: .2;
+  }
+
+  .play_btn:hover,
+  .pause_btn:hover {
+    opacity: .7;
+  }
+
+  .hide {
+    display: none;
+    transition: .4s ease-in-out;
+  }
+
+  .show {
+    display: block;
+    transition: .4s ease-in-out;
+  }
+
+  @media only screen and (max-width: 800px) {
+    .carousel-inner{
+        height: auto !important;
+    }
+    .carousel_img{
+      height:180px;
+      width: 100%;
+    }
+}
