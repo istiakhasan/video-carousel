@@ -1,115 +1,129 @@
-.carousel-item{
+.carousel-item {
   position: unset !important;
 }
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 450px !important;
+}
+
+.carousel-caption {
+  position: absolute;
+  padding-top: 1.25rem !important;
+  padding-bottom: 1.25rem !important;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  left: 0 !important;
+}
+.carousel-caption::after {
+  position: absolute;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  color: #fff;
+  text-align: center;
+  background: red;
+  width: 100%;
+  height: 100%;
+  left: 0 !important;
+}
+
+.slider_btn {
+  background: rgb(21, 55, 61);
+  padding: 4px 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: inline-block;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: sans-serif;
+  border-radius: 8px;
+}
+
+.play_btn,
+.pause_btn {
+  height: 60px;
+  cursor: pointer;
+  opacity: 0.4;
+}
+.unmute_btn,
+.mute_btn {
+  height: 30px;
+  cursor: pointer;
+  opacity: .4;
+}
+.unmute_btn:hover,
+.mute_btn:hover {
+  height: 30px;
+  cursor: pointer;
+  opacity: .8;
+}
+
+.play_btn:hover,
+.pause_btn:hover {
+  opacity: .8;
+}
+
+.hide {
+  display: none;
+  transition: 0.4s ease-in-out;
+}
+
+.show {
+  display: block;
+  transition: 0.4s ease-in-out;
+}
+
+.carousel-control-next {
+  right: 0;
+  height: 30px !important;
+  top: 50% !important;
+}
+.carousel-control-prev {
+  left: 0;
+  height: 30px !important;
+  top: 50% !important;
+}
+
+.play_btn_wraper {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 10%;
+}
+.mute_btn_wraper {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+@media only screen and (max-width: 800px) {
   .carousel-inner {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    height: 450px !important;
+    height: auto !important;
   }
-
-  .carousel-caption {
-    position: absolute;
-    padding-top: 1.25rem !important;
-    padding-bottom: 1.25rem !important;
-    color: #fff;
-    text-align: center;
+  .carousel_img {
+    height: 180px;
     width: 100%;
-    height: 100%;
-    left: 0 !important;
-
-  }
-  .carousel-caption::after {
-    position: absolute;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-    color: #fff;
-    text-align: center;
-    background: red;
-    width: 100%;
-    height: 100%;
-    left: 0 !important;
-
-  }
-
-  .slider_btn {
-    background: rgb(21, 55, 61);
-    padding: 4px 15px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    display: inline-block;
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-    font-family: sans-serif;
-    border-radius: 8px;
-
   }
 
   .play_btn,
   .pause_btn {
-    height: 60px;
+    height: 30px;
     cursor: pointer;
-    opacity: .8;
+    opacity: 0.2;
   }
-
-  .play_btn:hover,
-  .pause_btn:hover {
-    opacity: 1;
-  }
-
-  .hide {
-    display: none;
-    transition: .4s ease-in-out;
-  }
-
-  .show {
-    display: block;
-    transition: .4s ease-in-out;
-  }
-
 
   .carousel-control-next {
     right: 0;
     height: 30px !important;
-    top: 50% !important;
+    top: 30% !important;
   }
   .carousel-control-prev {
     left: 0;
     height: 30px !important;
-    top: 50% !important;
+    top: 30% !important;
   }
-
-  .play_btn_wraper{
-    position: absolute;
-    bottom: 15px;
-    right: 10px;
-  }
-
-  @media only screen and (max-width: 800px) {
-    .carousel-inner{
-        height: auto !important;
-    }
-    .carousel_img{
-      height:180px;
-      width: 100%;
-    }
-
-    .play_btn,
-    .pause_btn {
-      height: 30px;
-      cursor: pointer;
-      opacity: .2;
-    }
-
-    .carousel-control-next {
-      right: 0;
-      height: 30px !important;
-      top: 30% !important;
-    }
-    .carousel-control-prev {
-      left: 0;
-      height: 30px !important;
-      top: 30% !important;
-    }
 }

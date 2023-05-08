@@ -42,22 +42,31 @@
       <!-- Single item -->
       <div class="carousel-item active ">
 
-        <video class="img-fluid box_video " autoplay loop muted>
+        <video width="100%" height="100%" class="img-fluid box_video "  autoplay loop muted>
           <source src="https://mdbcdn.b-cdn.net/img/video/Tropical.mp4" type="video/mp4" />
+          <!-- <source  src="./Deora - Coke Studio Bangla - Season 2 - Pritom Hasan X Palakar X Ghaashphoring Choir X Fazlu Majhi.mp4" type="video/mp4" /> -->
+          <!-- <source src="./pexels-marc-mueller-2022395-1920x1080-30fps.mp4" type="video/mp4" /> -->
         </video>
+
+
 
         <div class="carousel-caption d-flex flex-column justify-content-center">
           <h5 class="">First slide label</h5>
           <p class="d-none d-md-block">
             Nulla vitae elit libero, a pharetra augue mollis interdum.
           </p>
+
           <div class="play_btn_wraper">
             <img class="play_btn video_parent hide" src="./play-button-28257.png" alt="">
             <img class="pause_btn " src="./icons8-pause-50.png" alt="">
           </div>
+          <div class="mute_btn_wraper">
+            <img class="mute_btn  " src="./mute.png" alt="">
+            <img class="unmute_btn hide" src="./speaker-filled-audio-tool.png" alt="">
+          </div>
         </div>
       </div>
-      <div class="carousel-item  ">
+       <div class="carousel-item  ">
 
         <video class="img-fluid box_video" autoplay loop muted>
           <source src="https://mdbcdn.b-cdn.net/img/video/forest.mp4" type="video/mp4" />
@@ -71,6 +80,10 @@
           <div class="play_btn_wraper">
             <img class="play_btn video_parent hide" src="./play-button-28257.png" alt="">
             <img class="pause_btn " src="./icons8-pause-50.png" alt="">
+          </div>
+          <div class="mute_btn_wraper">
+            <img class="mute_btn  " src="./mute.png" alt="">
+            <img class="unmute_btn hide" src="./speaker-filled-audio-tool.png" alt="">
           </div>
         </div>
       </div>
@@ -89,6 +102,10 @@
             <img class="play_btn video_parent hide" src="./play-button-28257.png" alt="">
             <img class="pause_btn " src="./icons8-pause-50.png" alt="">
           </div>
+          <div class="mute_btn_wraper">
+            <img class="mute_btn  " src="./mute.png" alt="">
+            <img class="unmute_btn hide" src="./speaker-filled-audio-tool.png" alt="">
+          </div>
         </div>
       </div>
 
@@ -98,10 +115,10 @@
 
 
 
-      <div class="carousel-item">
+      <div class="carousel-item ">
 
         <img class="img-fluid box_video" src="https://wallpapers.com/images/featured/2ygv7ssy2k0lxlzu.jpg" alt="">
-        <div class="carousel-caption d-none d-md-block">
+        <div class="carousel-caption d-flex flex-column justify-content-center">
           <h5>Third slide label</h5>
           <p>
             Praesent commodo cursus magna, vel scelerisque nisl consectetur.
@@ -132,6 +149,9 @@
     const videos = document.getElementsByClassName('box_video')
     const videos_parent = document.getElementsByClassName('video_parent')
     const pause_btn = document.getElementsByClassName('pause_btn')
+    const unmute_btn = document.getElementsByClassName('unmute_btn')
+    const mute_btn = document.getElementsByClassName('mute_btn')
+    console.log(unmute_btn, "unmute");
 
     for (let i = 0; i < videos.length; i++) {
       videos_parent[i].addEventListener('click', () => {
@@ -146,6 +166,22 @@
         videos[i].pause()
         videos_parent[i].classList.remove('hide')
         pause_btn[i].classList.add('hide')
+
+      })
+      mute_btn[i].addEventListener('click', () => {
+        console.log("click", mute_btn[i], unmute_btn[i]);
+        videos[i].muted = true;
+        console.log(videos[i].muted);
+        mute_btn[i].classList.add('hide')
+        unmute_btn[i].classList.remove('hide')
+
+      })
+      unmute_btn[i].addEventListener('click', () => {
+
+        videos[i].muted = false;
+        console.log(videos[i].muted);
+        mute_btn[i].classList.remove('hide')
+        unmute_btn[i].classList.add('hide')
 
       })
 
