@@ -1,4 +1,6 @@
-
+.carousel-item{
+  position: unset !important;
+}
   .carousel-inner {
     position: relative;
     width: 100%;
@@ -7,7 +9,27 @@
   }
 
   .carousel-caption {
-    top: 10% !important;
+    position: absolute;
+    padding-top: 1.25rem !important;
+    padding-bottom: 1.25rem !important;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    left: 0 !important;
+
+  }
+  .carousel-caption::after {
+    position: absolute;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: center;
+    background: red;
+    width: 100%;
+    height: 100%;
+    left: 0 !important;
+
   }
 
   .slider_btn {
@@ -28,12 +50,12 @@
   .pause_btn {
     height: 60px;
     cursor: pointer;
-    opacity: .2;
+    opacity: .8;
   }
 
   .play_btn:hover,
   .pause_btn:hover {
-    opacity: .7;
+    opacity: 1;
   }
 
   .hide {
@@ -60,8 +82,8 @@
 
   .play_btn_wraper{
     position: absolute;
-    top: 0;
-    right: 0;
+    bottom: 15px;
+    right: 10px;
   }
 
   @media only screen and (max-width: 800px) {
@@ -78,5 +100,16 @@
       height: 30px;
       cursor: pointer;
       opacity: .2;
+    }
+
+    .carousel-control-next {
+      right: 0;
+      height: 30px !important;
+      top: 30% !important;
+    }
+    .carousel-control-prev {
+      left: 0;
+      height: 30px !important;
+      top: 30% !important;
     }
 }
