@@ -46,6 +46,24 @@
     transition: .4s ease-in-out;
   }
 
+
+  .carousel-control-next {
+    right: 0;
+    height: 30px !important;
+    top: 50% !important;
+  }
+  .carousel-control-prev {
+    left: 0;
+    height: 30px !important;
+    top: 50% !important;
+  }
+
+  .play_btn_wraper{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
   @media only screen and (max-width: 800px) {
     .carousel-inner{
         height: auto !important;
@@ -53,5 +71,12 @@
     .carousel_img{
       height:180px;
       width: 100%;
+    }
+
+    .play_btn,
+    .pause_btn {
+      height: 30px;
+      cursor: pointer;
+      opacity: .2;
     }
 }
